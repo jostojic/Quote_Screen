@@ -7,8 +7,8 @@ DisplayController::DisplayController()
   // https://www.waveshare.com/product/displays/e-paper/2.7inch-e-paper-hat.htm
 
 #ifdef USE_GXEPD2
-  this->_display = new GxEPD2_BW<GxEPD2_420, GxEPD2_420::HEIGHT>(
-      GxEPD2_420(/*CS=5*/ SS, /*DC=*/15, /*RST=*/2, /*BUSY=*/4));
+  this->_display = new GxEPD2_BW<GxEPD2_420_GDEY042T81, GxEPD2_420_GDEY042T81::HEIGHT>(
+      GxEPD2_420_GDEY042T81(/*CS=5*/ SS, /*DC=*/15, /*RST=*/2, /*BUSY=*/4));
 #else
   GxIO_Class *io = new GxIO_Class(SPI, /*CS=5*/ SS, /*DC=*/17,
                                   /*RST=*/16); // arbitrary selection of 17, 16
